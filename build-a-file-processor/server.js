@@ -1,5 +1,5 @@
 // Starter file — add your code here
 const fs = require('fs');
 
-fs.appendFileSync('assets/output.txt', '\nThis is my second line!');
-
+const exists = fs.existsSync('assets/output.txt');
+console.log(exists);
