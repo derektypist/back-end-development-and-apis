@@ -1,1 +1,2 @@
 Hello, freeCodeCamp!
+This is my second line!
