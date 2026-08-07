@@ -10,4 +10,4 @@ console.log(path.resolve("assets", "..", "server.js"));
 console.log(path.parse(fullPath));
 console.log(process.version);
 console.log(process.platform);
-console.log(process.env);
+console.log(process.env.NODE_ENV);
