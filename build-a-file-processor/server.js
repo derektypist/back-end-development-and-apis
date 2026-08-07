@@ -1,9 +1,4 @@
 // Starter file — add your code here
-const os = require("os");
-console.log(os.platform());
-console.log(os.arch());
-console.log(os.hostname());
-console.log(os.totalmem());
-console.log(os.freemem());
-console.log(os.uptime());
-console.log(os.cpus().length);
+const path = require("path");
+const fullPath = path.join(__dirname, "assets", "poem.txt");
+console.log(fullPath);
