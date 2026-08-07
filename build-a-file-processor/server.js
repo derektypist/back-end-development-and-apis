@@ -11,3 +11,4 @@ console.log(path.parse(fullPath));
 console.log(process.version);
 console.log(process.platform);
 console.log(process.env.NODE_ENV);
+console.log(process.argv);
