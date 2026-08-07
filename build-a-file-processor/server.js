@@ -1,16 +1,10 @@
 // Starter file — add your code here
-const path = require("path");
-const fullPath = path.join(__dirname, "assets", "poem.txt");
-console.log(fullPath);
-console.log(path.basename(fullPath));
-console.log(path.dirname(fullPath));
-console.log(path.extname(fullPath));
-console.log(path.join("assets", "..", "server.js"));
-console.log(path.resolve("assets", "..", "server.js"));
-console.log(path.parse(fullPath));
-console.log(process.version);
-console.log(process.platform);
-console.log(process.env.NODE_ENV);
-console.log(process.argv);
-process.stdout.write("Hello from stdout\n");
-process.stderr.write("Hello from stderr\n");
+const fs = require("fs");
+const readable = fs.createReadStream("assets/poem.txt", {encoding: "utf8"});
+readable.on("data", (chunk) => {
+    console.log(chunk);
+});
+
+readable.on("end", () => {
+    console.log("Done reading");
+});
