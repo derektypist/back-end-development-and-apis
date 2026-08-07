@@ -8,3 +8,6 @@ console.log(path.extname(fullPath));
 console.log(path.join("assets", "..", "server.js"));
 console.log(path.resolve("assets", "..", "server.js"));
 console.log(path.parse(fullPath));
+console.log(process.version);
+console.log(process.platform);
+console.log(process.env);
