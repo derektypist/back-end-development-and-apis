@@ -1,4 +1,5 @@
 // Starter file — add your code here
-const crypto = require("crypto");
-const id = crypto.randomUUID();
-console.log(id);
+const os = require("os");
+console.log(os.platform());
+console.log(os.arch());
+console.log(os.hostname());
