@@ -20,3 +20,5 @@ console.log(caseConverter.getSentenceCase(str)); // Hello free code camp!
 ```
 
 ## License
+
+MIT
