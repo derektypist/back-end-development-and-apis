@@ -19,4 +19,4 @@ console.log(caseConverter.getProperCase(str)); // Hello Free Code Camp!
 console.log(caseConverter.getSentenceCase(str)); // Hello free code camp!
 ```
 
-## Licence
+## License
