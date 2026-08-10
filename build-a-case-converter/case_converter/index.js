@@ -1,3 +1,5 @@
+const { __esModule } = require("@babel/generator");
+
 function getUpperCase(str) {
     return str.toUpperCase();
 }
@@ -14,3 +16,10 @@ function getProperCase(str) {
     let words = str.split(" ");
     return words.map((s) => s[0].toUpperCase() + s.slice(1).toLowerCase()).join(" ");
 }
+
+module.exports = {
+    getUpperCase,
+    getLowerCase,
+    getSentenceCase,
+    getProperCase
+};
