@@ -7,3 +7,5 @@ This package is used to convert strings to a specific case.
 ```bash
 npm install case_converter
 ```
+
+## Usage Instructions
