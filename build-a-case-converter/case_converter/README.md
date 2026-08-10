@@ -1,3 +1,3 @@
 # Case Converter
 
-Converts strings to a specific case.
+This package is used to convert strings to a specific case.
