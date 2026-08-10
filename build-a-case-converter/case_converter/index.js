@@ -11,5 +11,6 @@ function getSentenceCase(str) {
 }
 
 function getProperCase(str) {
-    return str[0].toUpperCase() + str.slice(1).toLowerCase();
+    let words = str.split(" ");
+    return words.map((s) => s[0].toUpperCase() + s.slice(1).toLowerCase()).join(" ");
 }
