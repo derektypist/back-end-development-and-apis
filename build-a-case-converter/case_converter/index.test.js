@@ -5,4 +5,3 @@ assert.strictEqual(caseConverter.getUpperCase("hello free Code Camp!"),"HELLO FR
 assert.strictEqual(caseConverter.getLowerCase("hello free Code Camp!"),"hello free code camp!");
 assert.strictEqual(caseConverter.getProperCase("hello free Code Camp!"),"HeLlo free Code Camp!");
 assert.strictEqual(caseConverter.getSentenceCase("hello free Code Camp!"),"Hello fRee code camp!");
-assert.strictEuqal(caseConverter.getSentenceCase("hello free Code Camp!","hello free Code Camp!"));
