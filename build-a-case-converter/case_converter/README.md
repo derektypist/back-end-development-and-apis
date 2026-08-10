@@ -8,7 +8,7 @@ This package is used to convert strings to a specific case.
 npm install case_converter
 ```
 
-## Usage Instructions
+## Usage
 
 ```js
 const caseConverter = require('./index');
