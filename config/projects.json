@@ -32,7 +32,7 @@
     "dashedName": "build-a-case-converter",
     "isIntegrated": false,
     "isPublic": true,
-    "currentLesson": 38,
+    "currentLesson": 40,
     "runTestsOnWatch": true,
     "seedEveryLesson": false,
     "isResetEnabled": false,
