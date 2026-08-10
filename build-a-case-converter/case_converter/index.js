@@ -5,3 +5,7 @@ function getUpperCase(str) {
 function getLowerCase(str) {
     return str.toLowerCase();
 }
+
+function getSentenceCase(str) {
+    
+}
