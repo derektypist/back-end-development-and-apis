@@ -1,6 +1,6 @@
 const http = require("http");
 const { join } = require("path");
-const { readFile} = require("fs");
+const { readFile } = require("fs");
 const server = http.createServer((request, response) => {
   console.log(request.headers);
   console.log(request.url);
