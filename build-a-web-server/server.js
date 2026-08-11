@@ -1,19 +1,21 @@
 const http = require("http");
-const { join } = require("path");
+const { join, extname } = require("path");
 const { readFile } = require("fs");
 
 const server = http.createServer((request, response) => {
+  const { extname } = require("path");
   console.log(request.headers);
   console.log(request.url);
   const url = request.url === "/" ? "/index.html" : request.url;
   const filePath = join("public", url);
-
+  const ext = extname(filePath);
   const mimeTypes = {
-    ".css": "text/css",
-    ".js": "text/javascript",
     ".html": "text/html",
-    ".png": "image/png"
-  }
+    ".css": "text/css",
+    ".png": "image/png",
+    ".js": "text/javascript",
+  };
+
   readFile(filePath, (error, file) => {
     if (error) {
       console.error(error);
