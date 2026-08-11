@@ -15,21 +15,21 @@ const server = http.createServer((request, response) => {
     ".js": "text/javascript",
   };
 
-  const ext = extname(filePath);
+  const ext = extname(filePath).toLowerCase();
   const contentType = mimeTypes[ext] || "application/octet-stream";
 
   readFile(filePath, (error, file) => {
     if (error) {
       console.error(error);
       readFile("public/404.html", (error, file) => {
-        response.writeHead(404, {"Content-Type" : "text/html" });
+        response.writeHead(404, { "Content-Type": "text/html" });
         response.end(file, "utf-8");
       });
       return;
     }
-    response.writeHead(200, {"Content-Type": contentType});
+    response.writeHead(200, { "Content-Type": contentType });
     response.end(file, "utf-8");
   });
 });
 
-server.listen(3001);
+server.listen(3001, console.log(`Server is listening on port 3001`));
