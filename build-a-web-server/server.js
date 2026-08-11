@@ -4,6 +4,7 @@ const server = http.createServer((request, response) => {
   console.log(request.headers);
   console.log(request.url);
   response.end(request.url);
+  let url = request.url === "/" ? "/index.html" : request.url;
 });
 
 server.listen(3001);
