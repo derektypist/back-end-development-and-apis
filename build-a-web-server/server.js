@@ -9,7 +9,12 @@ const server = http.createServer((request, response) => {
   const filePath = join("public", url);
   response.end(filePath, "utf-8");
 
-  readFile(filePath, (error, file) => {});
+  readFile(filePath, (error, file) => {
+    if (error) {
+        console.error(error);
+        return;
+    }
+  });
 });
 
 server.listen(3001);
