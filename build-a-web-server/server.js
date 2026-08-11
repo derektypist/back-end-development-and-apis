@@ -3,8 +3,6 @@ import { join, extname } from "path";
 import { readFile } from "fs";
 
 const server = http.createServer((request, response) => {
-  console.log(request.headers);
-  console.log(request.url);
   const url = request.url === "/" ? "/index.html" : request.url;
   const filePath = join("public", url);
 
@@ -31,4 +29,4 @@ const server = http.createServer((request, response) => {
   });
 });
 
-server.listen(3001);
+server.listen(3001, () => console.log("Server is listening on port 3001"));
