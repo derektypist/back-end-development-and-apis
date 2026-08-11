@@ -7,13 +7,13 @@ const server = http.createServer((request, response) => {
   console.log(request.url);
   const url = request.url === "/" ? "/index.html" : request.url;
   const filePath = join("public", url);
-  response.end(filePath, "utf-8");
 
   readFile(filePath, (error, file) => {
     if (error) {
-        console.error(error);
-        return;
+      console.error(error);
+      return;
     }
+    response.end(file, "utf-8");
   });
 });
 
