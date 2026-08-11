@@ -20,7 +20,6 @@ const server = http.createServer((request, response) => {
 
   readFile(filePath, (error, file) => {
     if (error) {
-      console.error(error);
       readFile("public/404.html", (error, file) => {
         response.writeHead(404, { "Content-Type": "text/html" });
         response.end(file, "utf-8");
@@ -32,4 +31,4 @@ const server = http.createServer((request, response) => {
   });
 });
 
-server.listen(3001, () => console.log("Server is listening on port 3001"));
+server.listen(3001);
