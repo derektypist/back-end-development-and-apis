@@ -3,18 +3,20 @@ const { join, extname } = require("path");
 const { readFile } = require("fs");
 
 const server = http.createServer((request, response) => {
-  const { extname } = require("path");
   console.log(request.headers);
   console.log(request.url);
   const url = request.url === "/" ? "/index.html" : request.url;
   const filePath = join("public", url);
-  const ext = extname(filePath);
+
   const mimeTypes = {
     ".html": "text/html",
     ".css": "text/css",
     ".png": "image/png",
     ".js": "text/javascript",
   };
+
+  const ext = extname(filePath);
+  const contentType = mimeTypes[ext] || "application/octet-stream";
 
   readFile(filePath, (error, file) => {
     if (error) {
