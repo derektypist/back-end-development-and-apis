@@ -1,6 +1,6 @@
-const http = require("http");
-const { join, extname } = require("path");
-const { readFile } = require("fs");
+import http from "http";
+import { join, extname } from "path";
+import { readFile } from "fs";
 
 const server = http.createServer((request, response) => {
   console.log(request.headers);
