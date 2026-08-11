@@ -60,7 +60,7 @@
     "dashedName": "build-a-web-server",
     "isIntegrated": false,
     "isPublic": true,
-    "currentLesson": 35,
+    "currentLesson": 37,
     "runTestsOnWatch": true,
     "seedEveryLesson": true,
     "isResetEnabled": false,
