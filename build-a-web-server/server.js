@@ -12,6 +12,7 @@ const server = http.createServer((request, response) => {
     if (error) {
       console.error(error);
       response.end(error.message, "utf-8");
+      return;
     }
     response.end(file, "utf-8");
   });
