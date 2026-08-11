@@ -11,7 +11,9 @@ const server = http.createServer((request, response) => {
   readFile(filePath, (error, file) => {
     if (error) {
       console.error(error);
-      response.end("public/404.html", "utf-8");
+      readfile("public/404.html", (error, file) => {
+        response.end(file, "utf-8");
+      });
       return;
     }
     response.end(file, "utf-8");
